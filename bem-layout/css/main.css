@@ -1,0 +1,139 @@
+/* Сброс базовых отступов и шрифтов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ШАПКА */
+.header {
+    background: url('../img/backgroun.jpg') center/cover no-repeat; /* фон, можно заменить */
+    color: #fff;
+    padding: 20px 0 60px;
+}
+
+/* Внутренняя обертка для логотипа и меню */
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ЛОГОТИП */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__image {
+    height: 40px;
+}
+
+.logo_text {
+    height: 20px;
+}
+
+/* КНОПКА МЕНЮ */
+.header__button-menu {
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__button-menu::before,
+.header__button-menu::after,
+.header__button-menu span {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.header__button-menu::before {
+    top: 0;
+}
+
+.header__button-menu::after {
+    bottom: 0;
+}
+
+.header__button-menu span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* КОНТЕНТ В ШАПКЕ */
+.header-content {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.header-content__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.header-content__title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.header-content__text {
+    font-size: 16px;
+    max-width: 600px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.header__link {
+    display: inline-block;
+    background: #ff6b2b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.header__link:hover {
+    background: #ff853f;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .header-content__title {
+        font-size: 32px;
+    }
+
+    .header__inner {
+        flex-direction: row;
+    }
+}
+
+
+
+
+
